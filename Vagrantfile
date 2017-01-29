@@ -68,10 +68,13 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  $script = <<SCRIPT
-  echo I am provisioning...
-  sudo apt-get update;
-  sudo apt-get install nodejs mariadb git
+
+  $script = <<-SCRIPT
+
+      echo I am provisioning...
+      sudo apt-get update;
+      sudo apt-get install nodejs mariadb git
+
   SCRIPT
 
   Vagrant.configure("2") do |config|
